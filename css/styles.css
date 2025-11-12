@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 10px;
+    font-family: "Open Sans", sans-serif;
+}
+
 ul{
     list-style:none;
 }
@@ -13,6 +18,53 @@ a{
     color: black;
 }
 
-body{
-    background-color: red;
+:root{
+    --color__button__blue: #0048ff;
+}
+
+/* HEADER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.nav{
+    width: 100%;
+    max-width: 100rem;
+    background-color: yellow;
+    margin: 0 auto;
+}
+
+.nav{
+    max-width: 150rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav *{
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.nav ul li a{
+    padding: 2rem 1rem;
+}
+
+.nav__left .nav__logo{
+    vertical-align: middle;
+}
+
+.nav__left .nav__logo img{
+    height: 2.4rem;
+}
+
+.nav__right .button__login{
+    background-color: var(--color__button__blue);
+    padding: .5rem 1.4rem !important;
+    color: white;
+}
+
+.nav__left ul{
+    margin-left: 2rem;
+}
+
+.nav__right .button__login{
+    margin: 0 2rem;
 }
