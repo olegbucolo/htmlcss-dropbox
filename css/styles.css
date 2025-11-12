@@ -20,15 +20,24 @@ a{
 
 :root{
     --color__button__blue: #0048ff;
+    --color__backgr__blue: rgba(75, 141, 185, .4);
 }
 
 /* HEADER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
+header{
+    height: 6rem;
+    background-color: white;
+}
+
 .nav{
     width: 100%;
     max-width: 100rem;
-    background-color: yellow;
+    background-color: white;
     margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav{
@@ -43,28 +52,78 @@ a{
     font-weight: 600;
 }
 
-.nav ul li a{
+.nav li a{
     padding: 2rem 1rem;
 }
 
-.nav__left .nav__logo{
+.nav .left .nav__logo{
     vertical-align: middle;
 }
 
-.nav__left .nav__logo img{
-    height: 2.4rem;
+.nav .left .nav__logo img{
+    height: 2.2rem;
 }
 
-.nav__right .button__login{
+.link__free__trial,
+.nav .right .button__login {
     background-color: var(--color__button__blue);
     padding: .5rem 1.4rem !important;
     color: white;
+    margin: 0 2rem;
 }
 
-.nav__left ul{
+.nav .left ul{
     margin-left: 2rem;
 }
 
-.nav__right .button__login{
-    margin: 0 2rem;
+/* SECTION__WELCOME */
+
+.section__welcome{
+    width: 100%;
+    background-color: var(--color__backgr__blue);
+}
+
+.container__welcome{
+    width: 100%;
+    max-width: 100rem;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 10rem 15rem 0;
+}
+
+.container__welcome .bottom{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container__welcome .top h1{
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+}
+
+.container__welcome .bottom .text{
+    flex: 4;
+    font-size: 1.2rem
+}
+
+.container__welcome .bottom .text >*{
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.container__welcome .bottom .img{
+   flex: 5;
+   position: relative;
+}
+
+.container__welcome .bottom .img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+}
+
+.link__free__trial{
+    margin-left: 0;
 }
