@@ -68,7 +68,7 @@ header {
 .nav .right .button__login,
 .try__for__free {
     background-color: var(--color__button__blue);
-    padding: .8rem 1.4rem !important;
+    padding: 0.8rem 1.4rem !important;
     color: white;
     margin: 0 2rem;
     font-size: 1.4rem;
@@ -141,7 +141,7 @@ main .container {
     border-top: 1px solid lightgrey;
 }
 
-.container__01 .h1__title {
+.container__01 .h1__title, .title__operations {
     font-size: 2.8rem;
     margin-bottom: 4rem;
 }
@@ -152,7 +152,6 @@ main .container {
 }
 
 .billing label {
-
     margin-right: 3rem;
 }
 
@@ -166,35 +165,37 @@ main .container {
     position: relative;
 }
 
-.plan::before{
+.plan::before {
     position: absolute;
     content: "";
     width: 100%;
-    height:.1rem;
+    height: 0.1rem;
     background-color: lightgrey;
     left: 0;
-    top: 4rem
+    top: 4rem;
 }
 
 .plan > * {
     position: relative;
 }
 
-.plan__01, .plan__02, .plan__03{
+.plan__04 >.container__link {
+    position: unset;
+}
+
+.plan__01,
+.plan__02,
+.plan__03 {
     flex: 1;
-
 }
 
-.plan__04{
+.plan__04 {
     flex: 3;
-    
 }
 
-
-.plan__selector{
+.plan__selector {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: flex-start; */
     gap: 4rem;
 }
 
@@ -287,11 +288,12 @@ main .container {
     content: "\f07b";
 }
 
-.plan__02 .user__svg::before{
+.plan__02 .user__svg::before {
     content: "\f0c0";
 }
 
-.plan__03 .user__svg::before, .plan__04 .user__svg::before{
+.plan__03 .user__svg::before,
+.plan__04 .user__svg::before {
     content: "\f1ad";
 }
 
@@ -299,17 +301,94 @@ main .container {
     content: "\f007";
 }
 
-.plan__04  .or__buy{
+.plan__04 .or__buy {
     padding-left: 0;
     border: none;
     margin-left: 0;
 }
 
-.plan__04 .try__for__free{
+.plan__04 .try__for__free {
     position: absolute;
     top: 2rem;
     right: 2rem;
 }
 .plan__04 .key__points {
     padding-top: 0;
+    font-size: 1.2rem;
+}
+
+/* PARTNER SECTION ************************************************** */
+
+.join__section {
+    width: 100%;
+}
+
+.container__join__section, .container__section {
+    max-width: 120rem;
+    width: 100%;
+    padding: 0 15rem 10rem 15rem;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.container__join__section .container__img {
+    flex: 1;
+}
+
+.container__join__section .container__img img {
+    width: 100%;
+}
+
+.container__join__section .text__join__section {
+    flex: 1;
+}
+
+.container__join__section .text__join__section {
+    padding: 4rem 8rem 4rem 4rem;
+}
+
+.container__join__section .text__join__section p, .p__operation {
+    font-size: 1.4rem;
+    margin-bottom: 5rem;
+    margin-top: 2.5rem;
+}
+
+.container__join__section .text__join__section .link__partner {
+    font-size: 1.6rem;
+    border: .1rem solid black;
+    padding: 1rem 2rem;
+}
+
+/* OPERATIONS ################################################## */
+
+.section__operations{
+    width: 100%;
+}
+
+.container__operations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.operation{
+    max-width: 30%;
+    display: inline;
+}
+
+.operation * {
+    display: block;
+}
+
+.operation .img__container__operation{
+    height: 50%;
+}
+
+.operation .img__container__operation img{
+    width: 100%;
+}
+
+.container__section{
+    display: block;
 }
