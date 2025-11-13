@@ -1,36 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 10px;
     font-family: "Open Sans", sans-serif;
 }
 
-ul{
-    list-style:none;
+ul {
+    list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-:root{
+:root {
     --color__button__blue: #0048ff;
-    --color__backgr__blue: rgba(75, 141, 185, .4);
+    --color__backgr__blue: rgba(75, 141, 185, 0.4);
 }
 
 /* HEADER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
-header{
+header {
     height: 6rem;
     background-color: white;
 }
 
-.nav{
+.nav {
     width: 100%;
     max-width: 100rem;
     background-color: white;
@@ -40,50 +40,53 @@ header{
     transform: translateX(-50%);
 }
 
-.nav{
+.nav {
     max-width: 150rem;
     display: flex;
     justify-content: space-between;
 }
 
-.nav *{
+.nav * {
     display: inline-block;
     font-size: 1.4rem;
     font-weight: 600;
 }
 
-.nav li a{
+.nav li a {
     padding: 2rem 1rem;
 }
 
-.nav .left .nav__logo{
+.nav .left .nav__logo {
     vertical-align: middle;
 }
 
-.nav .left .nav__logo img{
+.nav .left .nav__logo img {
     height: 2.2rem;
 }
 
 .link__free__trial,
-.nav .right .button__login {
+.nav .right .button__login,
+.try__for__free {
     background-color: var(--color__button__blue);
-    padding: .5rem 1.4rem !important;
+    padding: 0.5rem 1.4rem !important;
     color: white;
     margin: 0 2rem;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 
-.nav .left ul{
+.nav .left ul {
     margin-left: 2rem;
 }
 
 /* SECTION__WELCOME */
 
-.section__welcome{
+.section__welcome {
     width: 100%;
     background-color: var(--color__backgr__blue);
 }
 
-.container__welcome{
+.container__welcome {
     width: 100%;
     max-width: 100rem;
     height: 80vh;
@@ -91,39 +94,170 @@ header{
     padding: 10rem 15rem 0;
 }
 
-.container__welcome .bottom{
+.container__welcome .bottom {
     display: flex;
     justify-content: flex-start;
 }
 
-.container__welcome .top h1{
+.container__welcome .top h1 {
     font-size: 5rem;
     font-weight: 900;
     margin-bottom: 3rem;
 }
 
-.container__welcome .bottom .text{
+.container__welcome .bottom .text {
     flex: 4;
-    font-size: 1.2rem
+    font-size: 1.2rem;
 }
 
-.container__welcome .bottom .text >*{
+.container__welcome .bottom .text > * {
     margin-bottom: 3rem;
     font-weight: 600;
 }
 
-.container__welcome .bottom .img{
-   flex: 5;
-   position: relative;
+.container__welcome .bottom .img {
+    flex: 5;
+    position: relative;
 }
 
-.container__welcome .bottom .img img{
+.container__welcome .bottom .img img {
     position: absolute;
     top: 0;
     left: 0;
     width: 150%;
 }
 
-.link__free__trial{
+.link__free__trial {
     margin-left: 0;
+}
+
+/* SECTION MAIN */
+
+main .container {
+    max-width: 100rem;
+    width: 100%;
+    padding: 10rem 20rem 0;
+    margin: 0 auto;
+}
+
+.container__01 .h1__title {
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+}
+
+.billing {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+}
+
+.billing label {
+
+    margin-right: 3rem;
+}
+
+/* plans generic ################################################## */
+
+.plan {
+    max-width: 30%;
+    display: inline-block;
+    padding: 1rem 3rem;
+    border: 0.1rem solid lightgrey;
+    flex: 1;
+}
+
+.plan > * {
+    position: relative;
+}
+
+.plan .entity {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.plan .name {
+    font-size: 2rem;
+    margin: 3rem 0 1rem;
+}
+
+.plan .price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.plan .monthly {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: grey;
+    font-weight: 500;
+}
+
+.plan .text__card {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    font-weight: 500;
+}
+
+.plan .try__for__free {
+    display: block;
+    width: fit-content;
+    margin: 4rem auto;
+}
+
+.plan .or__buy {
+    padding-bottom: 5rem;
+    border-bottom: 0.1rem solid lightgrey;
+    margin-bottom: 0;
+}
+
+.plan .or__buy a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.plan .key__points {
+    padding-top: 5rem;
+    letter-spacing: 0.02rem;
+    font-size: 1.1rem;
+    font-weight: 900;
+    padding-left: 0;
+    margin-bottom: 3rem;
+}
+
+/* SVG ALLE CARD */
+
+.check::before,
+.share__svg::before,
+.storage__svg::before,
+.user__svg::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    left: -1rem;
+    top: 0.2rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: black;
+}
+
+.check::before {
+    content: "\f00c";
+    color: var(--color__button__blue);
+}
+
+.share__svg::before {
+    content: "\f1e0";
+}
+
+.storage__svg::before {
+    content: "\f07b";
+}
+
+.user__svg::before {
+    content: "\f007";
 }
