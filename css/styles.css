@@ -88,10 +88,10 @@ header {
 
 .container__welcome {
     width: 100%;
-    max-width: 120rem;
+    max-width: 100rem;
     height: 80vh;
     margin: 0 auto;
-    padding: 10rem 10rem 0;
+    padding: 10rem 0;
 }
 
 .container__welcome .bottom {
@@ -134,9 +134,9 @@ header {
 /* SECTION MAIN */
 
 main .container {
-    max-width: 120rem;
+    max-width: 90rem;
     width: 100%;
-    padding: 10rem 15rem 10rem 15rem;
+    padding: 10rem 0;
     margin: 10rem auto;
     border-top: 1px solid lightgrey;
 }
@@ -153,14 +153,13 @@ main .container {
     margin-bottom: 4rem;
 }
 
-.billing label {
+.billing span {
     margin-right: 3rem;
 }
 
 /* plans generic ################################################## */
 
 .plan {
-    min-width: 30%;
     display: inline-block;
     padding: 1rem 3rem;
     border: 0.1rem solid lightgrey;
@@ -188,11 +187,11 @@ main .container {
 .plan__01,
 .plan__02,
 .plan__03 {
-    flex: 1;
+    width: calc(100% / 3 - 3rem);
 }
 
 .plan__04 {
-    flex: 3;
+    width: 100%;
 }
 
 .plan__selector {
@@ -328,14 +327,12 @@ main .container {
 
 .container__join__section,
 .container__section {
-    max-width: 120rem;
+    max-width: 90rem;
     width: 100%;
-    padding: 0 15rem 10rem 15rem;
-    margin: 0 auto;
+    margin: 0 auto 10rem;
     display: flex;
     justify-content: center;
 }
-
 
 .container__join__section .container__img {
     flex: 1;
@@ -401,74 +398,72 @@ main .container {
 
 /* TEAMS USING ################################################## */
 
-.container__teams__using{
-    max-width: 120rem;
+.container__teams__using {
+    max-width: 90rem;
     width: 100%;
-    padding: 0 15rem 10rem 15rem;
-    margin: 0 auto;
+    margin: 0 auto 10rem;
 }
 
-.container__teams__using a{
+.container__teams__using a {
     font-size: initial;
     text-decoration: underline;
     color: blue;
-
 }
 
 /* FOOTER ################################################## */
 
-footer{
+footer {
     background-color: black;
 }
 
 .footer__container {
-    max-width: 150rem;
+    max-width: 100rem;
     width: 100%;
-    padding: 5rem 10rem 5rem 10rem;
-    margin: 0 auto;   
+    padding: 5rem 0;
+    margin: 0 auto;
 }
 
-.footer__container .top{
+.footer__container .top {
     padding-bottom: 5rem;
-    border-bottom: .1rem solid white;
+    border-bottom: 0.1rem solid white;
 }
 
-.footer__container .top ul{
+.footer__container .top ul {
     display: flex;
     justify-content: space-between;
 }
 
-.footer__container .top ul a{
+.footer__container .top ul a {
     margin-bottom: 1rem;
 }
 
-.footer__container .top ul a:first-of-type{
+.footer__container .top ul a:first-of-type {
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
-.footer__container *{
+.footer__container * {
     color: white;
 }
-.footer__container .top *{
+.footer__container .top * {
     display: block;
 }
 
-.footer__container .bottom{
+.footer__container .bottom {
     text-align: center;
     margin: 5rem 0 0;
 }
 
-.footer__container .bottom select{
+.footer__container .bottom select {
     background-color: black;
     border: none;
 }
 
-.curr__language{
-    position: relative
+.curr__language {
+    position: relative;
 }
 
-.curr__language::before{
+.curr__language::before {
     content: "\f7a2";
     color: white;
     left: -2rem;
@@ -478,41 +473,39 @@ footer{
 /* HOVER EFFECT ################################################## */
 
 .hover__effect__nav:hover {
-    padding-bottom: calc(2rem - .1rem); 
-    border-bottom: .2rem solid black;
-
+    padding-bottom: calc(2rem - 0.1rem);
+    border-bottom: 0.2rem solid black;
 }
 
-.special__effect{
+.special__effect {
     position: relative;
     background-color: white;
 }
 
-.special__effect::before{
+.special__effect::before {
     position: absolute;
     content: "";
     background-color: red;
     width: 60%;
-    left: .1rem;
+    left: 0.1rem;
     top: 0;
     height: 1500%;
     transform: translateY(-85rem);
     z-index: -1;
     border-bottom-left-radius: 3rem;
     border-right: 3px solid white;
-    border-left: .6rem solid rgb(111, 1, 1);
+    border-left: 0.6rem solid rgb(111, 1, 1);
 
     border-bottom-right-radius: 3rem;
     transition: transform 3s ease-out;
-
 }
 
-.special__effect::after{
+.special__effect::after {
     position: absolute;
     content: "";
     background-color: red;
     width: 40%;
-    right: .1rem;
+    right: 0.1rem;
     height: 1200%;
     top: 0;
     transform: translateY(-85rem);
@@ -520,12 +513,13 @@ footer{
     border-bottom-left-radius: 3rem;
     transition: transform 3s ease-out;
     border-right: 3px solid white;
-    border-left: .6rem solid rgb(111, 1, 1);
+    border-left: 0.6rem solid rgb(111, 1, 1);
 
     border-bottom-right-radius: 3rem;
 }
 
-.special__effect:hover::before, .special__effect:hover::after{
+.special__effect:hover::before,
+.special__effect:hover::after {
     transform: translateY(0rem);
     transition: transform 3s ease-out;
 }
