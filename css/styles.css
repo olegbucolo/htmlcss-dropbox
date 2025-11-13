@@ -474,3 +474,58 @@ footer{
     left: -2rem;
     top: 0;
 }
+
+/* HOVER EFFECT ################################################## */
+
+.hover__effect__nav:hover {
+    padding-bottom: calc(2rem - .1rem); 
+    border-bottom: .2rem solid black;
+
+}
+
+.special__effect{
+    position: relative;
+    background-color: white;
+}
+
+.special__effect::before{
+    position: absolute;
+    content: "";
+    background-color: red;
+    width: 60%;
+    left: .1rem;
+    top: 0;
+    height: 1500%;
+    transform: translateY(-85rem);
+    z-index: -1;
+    border-bottom-left-radius: 3rem;
+    border-right: 3px solid white;
+    border-left: .6rem solid rgb(111, 1, 1);
+
+    border-bottom-right-radius: 3rem;
+    transition: transform 3s ease-out;
+
+}
+
+.special__effect::after{
+    position: absolute;
+    content: "";
+    background-color: red;
+    width: 40%;
+    right: .1rem;
+    height: 1200%;
+    top: 0;
+    transform: translateY(-85rem);
+    z-index: -1;
+    border-bottom-left-radius: 3rem;
+    transition: transform 3s ease-out;
+    border-right: 3px solid white;
+    border-left: .6rem solid rgb(111, 1, 1);
+
+    border-bottom-right-radius: 3rem;
+}
+
+.special__effect:hover::before, .special__effect:hover::after{
+    transform: translateY(0rem);
+    transition: transform 3s ease-out;
+}
