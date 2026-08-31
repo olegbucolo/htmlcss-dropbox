@@ -10,9 +10,7 @@ A frontend recreation of the Dropbox landing page, built to practice responsive 
 
 ## 📸 Preview
 
-> **Screenshot:** Replace this with a screenshot of the project.
-
-`![Dropbox Clone Screenshot](./screenshots/preview.png)`
+![Dropbox Clone Screenshot](./screenshots/preview.png)
 
 ## ✨ Features
 
